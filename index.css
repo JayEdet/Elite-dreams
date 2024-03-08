@@ -275,7 +275,20 @@ option {
 footer h4{
   text-align: center; 
 }
-
+ /* About page */
+ .first-picturediv{
+  background: url(./photos/new\ house.jpg),rgba(0,0,0,0.3);
+  background-blend-mode: darken;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+ }
+ .write-up{
+  font-family: Montserrat,sans-serif;
+ }
 @media(min-width:568px){  
 
 
@@ -308,7 +321,7 @@ footer h4{
         height: 400px;
          
       } 
-     
+    
 }
 @media (min-width:992px){
   footer h4{
