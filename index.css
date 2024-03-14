@@ -278,6 +278,7 @@ footer h4{
  /* About page */
  .first-picturediv{
   background: url(./photos/new\ house.jpg),rgba(0,0,0,0.3);
+  background-attachment: fixed;
   background-blend-mode: darken;
   height: 400px;
   background-repeat: no-repeat;
