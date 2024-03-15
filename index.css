@@ -9,20 +9,34 @@
 }
 
 :root{
-    --main-color:rgb(121, 6, 197);
-    --blur-main-color:rgba(159, 43, 236, 0.582);
+    --main-color:linear-gradient(to left,rgb(12, 53, 129),rgb(145, 86, 10));
+    --first-color:linear-gradient(rgb(49, 91, 170),rgb(207, 121, 9));
+    --blur-main-color:rgb(2, 14, 37);
     --text-main:rgb(12, 150, 86);
-    --text-sub:rgb(240, 171, 81);
+    --text-sub:rgb(197, 118, 14);
     --ash:rgba(250, 245, 245, 0.932);
 
 }
-/* html.sr .text{
-  visibility: hidden;
-} */
+body{
+  width: 100%;
+  height: 100%;
+}
+#home{
+  width: 100%;
+  height: 100vh;
+  background: url(./photos/new\ house.jpg),rgba(0,0,0,0.7);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
 a{
   text-decoration: none;
   border: none;
   outline: none;
+  text-decoration: none;
+  color: white;
 }
 select{
   outline: none;
@@ -37,18 +51,11 @@ select{
     font-size: 1.2rem;
 
 }
-.social-links a{
-    text-decoration: none;
-    color: white;
-}
 
 .main{
     color: var(--main-color);
 }
-body{
-    width: 100%;
-    height: 100%;
-}
+
 /* header elements */
 header{
     width: 100%;
@@ -69,23 +76,29 @@ header{
     top: 0;
     left: 0;
     z-index: 50;
-    background-color: white;
+
+   
 }
 /* javascript class */
 .sticky {
     position:fixed;
     top: 0;
     width: 100%;
-    background: white;
     padding: 10px 0;
-    border: 1px solid var(--main-color);
+    background:rgba(0,0,0,0.9);
+    color: var(--text-sub);
+  
     
   }
 .navbar-brand{
      font-weight: 900;
 }
+.logo{
+  width: 150px;
+}
 .navbar-toggler-icon{
-    background: var(--main-color);
+    background: var(--text-sub);
+    margin-top: 10px;
 }
 
 .off-smscreen{
@@ -93,26 +106,27 @@ header{
 }
 
 .nav-item a{
-    color: var(--main-color);
-    font-weight: bold;
+    color: var(--ash);
+    text-decoration: none;
 }
+.nav-item a:hover{
+  color: var(--text-sub);
+
+}
+
 .nav-btn{
-    border: 1px solid purple;
+    border: 1px solid var(--text-sub);
     border-radius: 10px;
+    color: white;
 }
+
 /* javascript class */
 
-.w-100-height{
-    width: 100%;
-    height: 100vh;
-    
-}
 
 .overlay{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.7);
     display: flex;
     flex-direction: column;
 }
@@ -130,19 +144,10 @@ header{
   .first-select{
     opacity: 0;
   }
-  /* .text{
-    opacity: 0;
 
-  } */
-/* .text{
-  transform: translatex(-100%);
-  opacity: 0;
-  display: inline-block;
-} */
 .dropdown-div{
     background:white;
-   /*  -webkit-backdrop-filter: blur(5px);
-    backdrop-filter:blur(5px); */
+ 
 }
 .dropdown-item{
     color: var(--main-color);
@@ -223,6 +228,17 @@ header{
   font-weight: bold;
   text-align: center;
 }
+.brief_icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+#brief_icon{
+  font-size: 100px;
+ color: var(--blur-main-color);
+
+}
 /* second swiper */
 .swiper-container{
   width: 100%;
@@ -234,7 +250,7 @@ header{
       text-align: center;
       width: 300px;
       font-size: 18px;
-      background: red;
+     /*  background: red; */
       border: 1px solid black;
       height: 300px;
 
@@ -295,6 +311,9 @@ footer h4{
 
 }
 @media(min-width:768px){
+  .logo{
+    width: 200px;
+  }
     .about-message{
         font-size: 1.5rem;
     }
@@ -303,11 +322,6 @@ footer h4{
     }
     .wrapper .carousel {
         grid-auto-columns: 100%;
-      }
-      .toplinks-cont{
-        display: flex;
-        background: var(--main-color);
-        justify-content: space-between;
       }
       .text-div{
         margin-top: 50px;
@@ -322,6 +336,12 @@ footer h4{
         height: 400px;
          
       } 
+      .brief_icon{
+        justify-content: start;
+      }
+      #brief_icon{
+        font-size: 70pxd;
+      }
     
 }
 @media (min-width:992px){

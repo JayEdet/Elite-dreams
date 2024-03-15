@@ -45,8 +45,6 @@ var swiper = new Swiper(".mySwiper", {
     tl.fromTo('.first-select',{y:30},{y:0, duration:1.5,opacity:1, ease:"sine.out"},0.5)
 
   /* scrollReveal*/
-/*   gsap.registerPlugin(ScrollTrigger); */
-    /* second swiper (reviews swiper) */
     var swiper2 = new Swiper(".swiper-container", {
       slidesPerView: 3,
       grid: {
@@ -59,35 +57,3 @@ var swiper = new Swiper(".mySwiper", {
       },
     });
 
-/*     let heroText = document.querySelectorAll('.text');
-let animation=()=>{
-  const show ={
-    distance:"40%",
-    delay:100,
-    opacity:0,
-    origin:"bottom",
-    reset:true,
-    showTwo:{
-        distance:"10%",
-        delay:200,
-        origin:'left',
-        opacity:0,
-        reset:true,
-    },
-    lilDelay:{
-        distance:"80%",
-        origin:"top",
-        opacity:0,
-        delay:500,
-        reset:true,
-    }   
-}
-
-  heroText.forEach((heroMessage)=>{
-    let mainText = heroMessage;
-    ScrollReveal().reveal(mainText, show)
-
-  })
-}
-animation();
- */
