@@ -11,6 +11,18 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+/* images lazy loading */
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all img elements
+  var images = document.querySelectorAll('img');
+  
+  // Loop through each image element
+  images.forEach(function(image) {
+      // Add loading="lazy" attribute to each image
+      image.setAttribute('loading', 'lazy');
+  });
+});
+
 /* first swiper  */
 var swiper = new Swiper(".mySwiper", {
  
@@ -45,7 +57,80 @@ var swiper = new Swiper(".mySwiper", {
     tl.fromTo('.first-select',{y:30},{y:0, duration:1.5,opacity:1, ease:"sine.out"},0.5)
 
   /* scrollReveal*/
-    var swiper2 = new Swiper(".swiper-container", {
+
+
+let Animation =()=>{
+  let par = document.querySelectorAll('.main');
+  let leftAnime = document.querySelectorAll('.left_anime');
+  let rightAnime = document.querySelectorAll('.right_anime');
+  let pictureAnime = document.querySelectorAll('.picture_anime');
+  let pictureAnime2 = document.querySelectorAll('.picture_anime2');
+ const show ={
+  distance:"20%",
+  delay:250,
+  opacity:0.5,
+  origin:"bottom",
+  reset:true,
+     left:{
+      distance:"100%",
+      delay:100,
+      opacity:0.5,
+      origin:"left",
+      reset:true,
+  },
+     right:{
+      distance:"5%",
+      delay:100,
+      opacity:0.3,
+      origin:"right",
+      reset:true,
+     
+  },
+     picture:{
+      distance:"3%",
+      delay:200,
+      opacity:0.3,
+      reset:true,
+      scale:0.5,
+      easing: 'ease-out',
+  },
+     pictureTwo:{
+      distance:"3%",
+      delay:200,
+      opacity:0.3,
+      reset:true,
+      scale:1.2,
+      easing: 'ease-in-out',
+    
+  }
+ }
+  par.forEach((mainpar)=>{
+    let animePar = mainpar
+    ScrollReveal().reveal(animePar, show)
+    })
+  leftAnime.forEach((leftanimate)=>{
+    let leftAnimation = leftanimate
+    ScrollReveal().reveal(leftAnimation, show.left)
+    })
+  rightAnime.forEach((rightanimate)=>{
+    let rightAnimation = rightanimate
+    ScrollReveal().reveal(rightAnimation, show.right)
+    })
+  pictureAnime.forEach((pictureAnimate)=>{
+    let pictureAnimation = pictureAnimate
+    ScrollReveal().reveal(pictureAnimation, show.picture)
+    })
+  pictureAnime2.forEach((pictureAnimate2)=>{
+    let pictureAnimation2 = pictureAnimate2
+    ScrollReveal().reveal(pictureAnimation2, show.pictureTwo)
+    })
+    console.log('hello world');
+
+
+  }
+Animation()
+
+/*     var swiper2 = new Swiper(".swiper-container", {
       slidesPerView: 3,
       grid: {
         rows: 2,
@@ -55,5 +140,5 @@ var swiper = new Swiper(".mySwiper", {
         el: ".swiper-pagination",
         clickable: true,
       },
-    });
+    }); */
 
