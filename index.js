@@ -59,14 +59,14 @@ var swiper = new Swiper(".mySwiper", {
   /* scrollReveal*/
 
 
-let Animation =()=>{
+ function Animation(){
   let par = document.querySelectorAll('.main');
   let leftAnime = document.querySelectorAll('.left_anime');
   let rightAnime = document.querySelectorAll('.right_anime');
   let pictureAnime = document.querySelectorAll('.picture_anime');
   let pictureAnime2 = document.querySelectorAll('.picture_anime2');
  const show ={
-  distance:"20%",
+  distance:"10%",
   delay:250,
   opacity:0.5,
   origin:"bottom",
@@ -87,19 +87,19 @@ let Animation =()=>{
      
   },
      picture:{
-      distance:"3%",
+      distance:"1%",
       delay:200,
       opacity:0.3,
       reset:true,
-      scale:0.5,
+      scale:0.7,
       easing: 'ease-out',
   },
      pictureTwo:{
-      distance:"3%",
+      distance:"1%",
       delay:200,
       opacity:0.3,
       reset:true,
-      scale:1.2,
+      scale:1,
       easing: 'ease-in-out',
     
   }
@@ -124,21 +124,12 @@ let Animation =()=>{
     let pictureAnimation2 = pictureAnimate2
     ScrollReveal().reveal(pictureAnimation2, show.pictureTwo)
     })
-    console.log('hello world');
+ 
 
 
   }
 Animation()
 
-/*     var swiper2 = new Swiper(".swiper-container", {
-      slidesPerView: 3,
-      grid: {
-        rows: 2,
-      },
-      spaceBetween: 30,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    }); */
+/* consistent header and footer */
+
 
