@@ -1,3 +1,11 @@
+let offcanvas = new bootstrap.Offcanvas(document.querySelector('.offcanvas'))
+
+links=document.querySelectorAll('.offcanvas a');
+links.forEach((canvasoff)=>{
+  canvasoff.addEventListener('click',()=>{
+    offcanvas.hide()
+  })
+})
 /* custom header stick */
 window.onscroll = function() {myFunction()};
 
@@ -11,6 +19,16 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+/* smooth scroll */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
 /* images lazy loading */
 document.addEventListener('DOMContentLoaded', function() {
   // Get all img elements
@@ -42,7 +60,7 @@ var swiper = new Swiper(".mySwiper", {
             slidesPerView: 2,
         },
         992 :{
-          slidesPerView: 3,
+          slidesPerView: 3
         }
     }
   });
@@ -57,8 +75,6 @@ var swiper = new Swiper(".mySwiper", {
     tl.fromTo('.first-select',{y:30},{y:0, duration:1.5,opacity:1, ease:"sine.out"},0.5)
 
   /* scrollReveal*/
-
-
  function Animation(){
   let par = document.querySelectorAll('.main');
   let leftAnime = document.querySelectorAll('.left_anime');

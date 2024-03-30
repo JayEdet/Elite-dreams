@@ -16,24 +16,24 @@
   
     <!-- REMEMBER, all styles are in css, bootstrap styling is only for responsiveness -->
  <main id="">
-      <special-header></special-header>
-      <section id="home">
+   <special-header></special-header>
+   <section id="home">
         <header id="header">
           <nav class="navbar navbar-expand-lg">
             <div class="container-fluid px-5" id="navbar-div">
                   <a class="navbar-brand logo" href="#header"><img src="./photos/elitedreams logo1.jpg" alt="" class="img-fluid"></a>
-                  <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                  <button class="btn  d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <i class="fa-solid fa-bars"></i>
                   </button>
                   <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                       <li class="nav-item">
-                        <a class="nav-link" href="home.htm">Home</a>
+                        <a class="nav-link" href="./index.html">Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="./about us/about.html">About us</a>
+                        <a class="nav-link" href="./about.html">About us</a>
                       </li>
-                      <li class="nav-item">
+                      <li class="nav-item"> 
                         <a class="nav-link" href="#">Services</a>
                       </li>
                       <li class="nav-item">
@@ -45,11 +45,44 @@
                     </ul>
                   </div>
                 </div>
+                <!-- offcanvas --> 
+                <div class="offcanvas offcanvas-start px-5 d-lg-none" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" 
+                style="background:rgba(0,0,0,0.9);">
+                  <div class="offcanvas-header d-flex justify-content-end">
+                    
+                    <button type="button" class="btn-close my-3" data-bs-dismiss="offcanvas" aria-label="Close">
+                      <i class="fa-solid fa-xmark "></i>
+                    </button>
+                  </div>
+                  <div class="offcanvas-body justify-content-center">
+                    <div>
+                      <a class="navbar-brand logo" href="#header"><img src="./photos/elitedreams logo1.jpg" alt="" class="img-fluid"></a>
+                      <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                          <a class="nav-link px-5" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link px-5" href="./about.html">About us</a>
+                        </li>
+                        <li class="nav-item"> 
+                          <a class="nav-link px-5" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link px-5" href="#">Properties</a>
+                        </li>
+                        <li class="nav-item ">
+                          <a class="nav-link btn-sm  px-5 rounded" href="#" style="background:var(--main-color);"> Contact</a>
+                        </li>
+                      </ul>
+                    </div>
+                  
+                  </div>
+                </div>
               </nav>
             </header>
          <div class="overlay ">
           <div class="text-div">
-            <h3 class="hero-text mx-5 first">Discover properties </h3> 
+            <h3 class="hero-text mx-5">Discover properties </h3> 
               <h3 class="hero-text mx-5 fw-bold mt-0">more easily</h3> 
           </div>
 
@@ -84,82 +117,75 @@
          <div class="swiper mySwiper container px-3 p-5">
           <h2 class="text-secondary fw-bold prop-text main">Our properties</h2>
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./photos/carousel apartment2.jpg" alt="">
-              <div class="description-div shadow">
-                <span><i class="fa-solid fa-location-dot"></i></span><h3>Uyo</h3>
-                <p>Duplex with 5 rooms, 2 parlors</p>
-                <span></span><h6 class="amount">Amount:$350,000,000</h6>
-              </div>
-
-            </div>
+          
             <div class="swiper-slide">
               <img src="./photos/carousel apartment1.jpg" alt="">
-              <div class="description-div shadow">
-                <span><i class="fa-solid fa-location-dot"></i></span><h3>Uyo</h3>
-                <p>Duplex with 5 rooms, 2 parlors</p>
-                <span></span><h6 class="amount">Amount:$350,000,000</h6>
+              <div class="description-div shadow p-3">
+                <span><i class="fa-solid fa-location-dot"></i>  Abuja</span><br>
+                <span><i class="fa-solid fa-bed"></i>  4 bedrooms</span><br>
+                <span><i class="fa-solid fa-sink"></i>  3 bathrooms</span>
               </div>
             </div>
             <div class="swiper-slide">
               <img src="./photos/uncompleted1.jpg" alt="">
-              <div class="description-div shadow">
-                <span><i class="fa-solid fa-location-dot"></i></span><h3>Uyo</h3>
-                <p>Duplex with 5 rooms, 2 parlors</p>
-                <span></span><h6 class="amount">Amount:$350,000,000</h6>
+              <div class="description-div shadow p-3">
+                <span><i class="fa-solid fa-location-dot"></i>  Portharcourt</span><br>
+                <span><i class="fa-solid fa-bed"></i>  4 bedrooms</span><br>
+                <span><i class="fa-solid fa-sink"></i>  3 bathrooms</span>
               </div>
             </div>
           
             <div class="swiper-slide">
               <img src="./photos/uncompleted2.jpg" alt="">
-              <div class="description-div shadow">
-                <span><i class="fa-solid fa-location-dot"></i></span><h3>Uyo</h3>
-                <p>Duplex with 5 rooms, 2 parlors</p>
-                <span></span><h6 class="amount">Amount:$350,000,000</h6>
+              <div class="description-div shadow p-3">
+                <span><i class="fa-solid fa-location-dot"></i>  Lagos</span><br>
+                <span><i class="fa-solid fa-bed"></i>  4 bedrooms</span><br>
+                <span><i class="fa-solid fa-sink"></i>  3 bathrooms</span>
               </div>
             </div>
           
             <div class="swiper-slide">
               <img src="./photos/comfy home.jpg" alt="">
-              <div class="description-div shadow">
-                <span><i class="fa-solid fa-location-dot"></i></span><h3>Uyo</h3>
-                <p>Duplex with 5 rooms, 2 parlors</p>
-                <span></span><h6 class="amount">Amount:$350,000,000</h6>
+              <div class="description-div shadow p-3">
+                <span><i class="fa-solid fa-location-dot"></i>  Abuja</span><br>
+                <span><i class="fa-solid fa-bed"></i>  4 bedrooms</span><br>
+                <span><i class="fa-solid fa-sink"></i>  3 bathrooms</span>
               </div>
             </div>
             
             <div class="swiper-slide">
               <img src="./photos/skyscrapper.jpg" alt="">
-              <div class="description-div shadow">
-                <span><i class="fa-solid fa-location-dot"></i></span><h3>Uyo</h3>
-                <p>Duplex with 5 rooms, 2 parlors</p>
-                <span></span><h6 class="amount">Amount:$350,000,000</h6>
+              <div class="description-div shadow p-3">
+                <span><i class="fa-solid fa-location-dot"></i>  Uyo</span><br>
+                <span><i class="fa-solid fa-bed"></i>  6 bedrooms</span><br>
+                <span><i class="fa-solid fa-sink"></i>  3 bathrooms</span>
               </div>
             </div>
         
             <div class="swiper-slide">
               <img src="./photos/Abuja city gate_.jpg" alt="">
-              <div class="description-div shadow">
-                <span><i class="fa-solid fa-location-dot"></i></span><h3>Uyo</h3>
-                <p>Duplex with 5 rooms, 2 parlors</p>
-                <span></span><h6 class="amount">Amount: $350,000,000</h6>
+              <div class="description-div shadow p-3">
+                <span><i class="fa-solid fa-location-dot"></i>  Lagos</span><br>
+                <span><i class="fa-solid fa-bed"></i>  4 bedrooms</span><br>
+                <span><i class="fa-solid fa-sink"></i>  3 bathrooms</span>
+               
               </div>
             </div>
             
             <div class="swiper-slide">
               <img src="./photos/uncompleted1.jpg" alt="">
-              <div class="description-div shadow" >
-                <span><i class="fa-solid fa-location-dot"></i></span><h3>Uyo</h3>
-                <p>Duplex with 5 rooms, 2 parlors</p>
-                <span></span><h6 class="amount">Amount:$350,000,000</h6>
+              <div class="description-div shadow p-3">
+                <span><i class="fa-solid fa-location-dot"></i>  Uyo</span><br>
+                <span><i class="fa-solid fa-bed"></i>  4 bedrooms</span><br>
+                <span><i class="fa-solid fa-sink"></i>  2 bathrooms</span>
               </div>
             </div>
             <div class="swiper-slide">
               <img src="./photos/uncompleted1.jpg" alt="">
-              <div class="description-div shadow">
-                <span><i class="fa-solid fa-location-dot"></i></span><h3>Uyo</h3>
-                <p>Duplex with 5 rooms, 2 parlors</p>
-                <span></span><h6 class="amount">Amount:$350,000,000</h6>
+              <div class="description-div shadow p-3">
+                <span><i class="fa-solid fa-location-dot"></i>  Abuja</span><br>
+                <span><i class="fa-solid fa-bed"></i>  4 bedrooms</span><br>
+                <span><i class="fa-solid fa-sink"></i>  3 bathrooms</span>
               </div>
             </div>
           </div>
@@ -169,13 +195,13 @@
         </div>
         <!-- more properties -->
         <div class="more-properties d-flex justify-content-center">
-          <button class=" p-3 mb-5 rounded">Browse more properties</button>
+          <button class=" p-3 mb-3 rounded">Browse more properties</button>
 
         </div>
         
-        <div class="container my-5 ">
+        <div class="container my-5">
           <div class="row" >
-            <div class="col-12 col-lg-6 rounded  " style="height: 400px;overflow: hidden;">
+            <div class="col-12 col-lg-6 rounded trust">
               <img src="./photos/Real estate home social media banner.jpeg" class="picture_anime img-fluid" alt="">
             </div>
             
@@ -242,26 +268,26 @@
             <h2 class="mt-5 text-secondary right_anime">How it works? <br>
             Find a <b class="text-dark r">perfect home</b></h2>
           <div class="row row-cols-md-2 row-cols-lg-4  py-5 briefs">
-            <div class="col-12">
-              <span class="brief_icon"><i class="fa-solid fa-house" id="brief_icon"></i></span>
+            <div class="col-12 shadow rounded">
+              <span class="brief_icon py-3"><i class="fa-solid fa-house" id="brief_icon"></i></span>
               <h3>Find real estate</h3>
               <p>We make it easy for you to find properties in a good neighborhood </p>
             </div>
           
-            <div class="col-12">
-              <span class="brief_icon"><i class="fa-solid fa-person" id="brief_icon"></i></span>
+            <div class="col-12 shadow rounded">
+              <span class="brief_icon py-3"><i class="fa-solid fa-person" id="brief_icon"></i></span>
               <h3>Meet realtor</h3>
               <p>You can meet up with a realtor at your earliest convenience</p>
             </div>
       
-            <div class="col-12">
-              <span class="brief_icon"><i class="fa-solid fa-file-contract" id="brief_icon"></i></span>
+            <div class="col-12 shadow rounded">
+              <span class="brief_icon py-3"><i class="fa-solid fa-file-contract" id="brief_icon"></i></span>
               <h3>Documents</h3>
               <p>Our services are well documented and we ensure you get complete documents to your </p>
             </div>
         
-            <div class="col-12">
-              <span class="brief_icon"><i class="fa-sharp fa-solid fa-key" id="brief_icon"></i></span>
+            <div class="col-12 shadow rounded">
+              <span class="brief_icon py-3"><i class="fa-sharp fa-solid fa-key" id="brief_icon"></i></span>
               <h3>Take the key</h3>
               <p>Get the key to your apartment</p>
             </div>
@@ -270,24 +296,20 @@
         </div>
        </section>
       <!-- make enquiry -->
-        <div class="container-fluid enquiry-row">
-          <div class="container py-3">
-            <div class="row ">
+        
+          
+           <div class="row  enquiry-row p-3">
               <div class="col-12 col-lg-6 d-flex">
                 <h3 class="text-light hero-text">Discover a new way <br> of living</h3>
               </div>
-              <div class="col-12 col-lg-6 ">
-                <div class="form-div rounded p-3">
+              <div class="col-12 col-lg-6 form-div rounded p-3">
                   <h4 class="fw-bold">Make an enquiry</h4>
                   <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your name*"required>
                   <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="Your Email*" required>
                   <input type="number" class="form-control" id="formGroupExampleInput2" number placeholder="Your phone number*" required>
                   <button class="modern-btn btn-md mt-3 p-3 rounded shadow"><a href="#">Make an enquiry</a></button>
-                </div>
+              </div> 
           </div>
-          </div>
-          </div>
-    </div>
        <section class="FAQ">
           <div class="container">
             <!-- fAQ -->
@@ -349,7 +371,7 @@
                       <a class="navbar-brand picture_anime" href="#header"><img src="./photos/elitedreams logo1.jpg" alt="" class="img-fluid"></a>
                     </div>
                    
-                   <p class="social-links"> <a href="#"><i class="fa-solid fa-envelope links"></i> ElitedreamsRealtyltd@gmail.com</a> </p>
+                   <p class="social-links"> <a href="mailto:elitedreamsrealtyltd@gmail.com"><i class="fa-solid fa-envelope links"></i> ElitedreamsRealtyltd@gmail.com</a> </p>
                    <p class="social-links"> <a href="#"><i class="fa-solid fa-phone links"></i> +234 8131 922 120</a> </p>
                   </div>
           
@@ -364,7 +386,7 @@
                   </div>
                   <div class="col-lg-3 my-3">
                     <h4 class="text-white">Stay connected</h4>
-                   <p class="social-links"><i class="fa-brands fa-facebook links"></i><a href="#"> Facebook</a></p>
+                   <p class="social-links"><i class="fa-brands fa-facebook links"></i><a href="https://m.facebook.com/profile.php/?id=61557534735240&name=xhp_nt__fb__action__open_user"> Facebook</a></p>
                    <p class="social-links"><i class="fa-brands fa-twitter links"></i><a href="#"> Twitter</a></p>
                    <p class="social-links"><i class="fa-brands fa-instagram links"></i><a href="#"> Instagram</a></p>
                    <p class="social-links"><i class="fa-brands fa-whatsapp links"></i><a href="#"> Whatsapp</a></p>
